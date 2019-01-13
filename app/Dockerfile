@@ -15,6 +15,7 @@ RUN mvn -f /usr/src/app/pom.xml clean install -DskipTests=true \
   && mvn -f /usr/src/app/pom.xml sonar:sonar \
     -Dsonar.host.url=http://${SONAR_SERVER}:${SONAR_PORT} \
     -Dsonar.login=${SONAR_TOKEN} \
+    -Dsonar.password=${SONAR_TOKEN} \
     -Dsonar.branch=${BRANCH_NAME} || exit 0 
 
 FROM maven:3.6.0-jdk-8 as build 

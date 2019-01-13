@@ -5,12 +5,10 @@ currentBuild.displayName = new SimpleDateFormat("yy.MM.dd").format(new Date()) +
 
  pipeline {
     agent {
-        docker {
-            image readProperties.imagePipeline
-        }
+        label 'swarm' 
     }
     environment {
-        SONAR_TOKEN = credentials('sonar-token') 
+        SONAR_TOKEN = "admin"
     }
     triggers {
          pollSCM('H/5 * * * *')
@@ -23,17 +21,14 @@ currentBuild.displayName = new SimpleDateFormat("yy.MM.dd").format(new Date()) +
           }
           steps{
                 buildDockerImage readProperties.image,
-                    readProperties.sonarServer
-            )  
+                    readProperties.sonarServer , false
           }
         }
 
         stage('deploy app'){
             when { expression{ env.BRANCH_NAME ==~ /dev.*/ || env.BRANCH_NAME ==~ /PR.*/ }}
             steps {
-                dir("app"){
-                    sh "docker-compose up"
-                } 
+                composeDeployApp readProperties.image
             }
 
         }
