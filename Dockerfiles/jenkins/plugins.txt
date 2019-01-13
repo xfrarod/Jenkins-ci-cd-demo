@@ -1,0 +1,15 @@
+credentials
+script-security
+slack
+workflow-aggregator
+git-client
+pipeline-utility-steps
+git
+github
+swarm
+blueocean
+thinBackup
+github-oauth
+email-ext
+config-file-provider
+ssh-agent

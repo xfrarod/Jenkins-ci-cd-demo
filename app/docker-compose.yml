@@ -1,0 +1,15 @@
+version: "2.4"
+
+services:
+
+  app:
+    image: gmlpdou/contact_app:${TAG:-latest}
+    ports:
+      - 8088:8080
+    networks:
+      - default
+
+networks:
+  default:
+    external: false
+
