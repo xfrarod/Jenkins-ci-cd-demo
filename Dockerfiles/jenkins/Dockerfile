@@ -13,7 +13,7 @@ COPY org.jenkinsci.plugins.configfiles.GlobalConfigFiles.xml /var/jenkins_home/o
 RUN mkdir -p /var/jenkins_home/jobs \ 
     && chown -R jenkins:jenkins /var/jenkins_home/jobs
 
-COPY config.xml /var/jenkins_home/jobs/Jenkins-ci-cd-demo/config.xml
+COPY --chown=jenkins:jenkins config.xml /var/jenkins_home/jobs/Jenkins-ci-cd-demo/config.xml
 
 
 
