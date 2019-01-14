@@ -59,7 +59,6 @@ networks:
   sonarqube:
 
 volumes:
-  jm:
   jmshare:
   workspace:
   nexus_data:
