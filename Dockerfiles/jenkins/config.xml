@@ -24,7 +24,7 @@
       <jenkins.branch.BranchSource>
         <source class="jenkins.plugins.git.GitSCMSource" plugin="git@3.9.1">
           <id>blueocean</id>
-          <remote>https://github.com/gmlp/Jenkins-ci-cd-demo.git</remote>
+          <remote>https://github.com/xfrarod/jenkins-ci-cd-basic-demo.git</remote>
           <traits>
             <jenkins.plugins.git.traits.BranchDiscoveryTrait/>
             <jenkins.plugins.git.traits.CleanBeforeCheckoutTrait>
