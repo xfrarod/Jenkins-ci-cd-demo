@@ -16,7 +16,7 @@ services:
     environment:
       - USER_NAME_SECRET=admin
       - PASSWORD_SECRET=admin
-      - COMMAND_OPTIONS=-master http://master:8080 ${AGENT_LABELS} -executors 4
+      - COMMAND_OPTIONS=-master http://master:8080 -labels swarm -executors 4 
     networks:
       - default
     volumes:
