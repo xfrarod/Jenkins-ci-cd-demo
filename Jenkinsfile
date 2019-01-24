@@ -33,9 +33,9 @@ currentBuild.displayName = new SimpleDateFormat("yy.MM.dd").format(new Date()) +
 
         }
     }
-    post {
+    /*post {
       always {
             sh "docker system prune -f"
       }
-    }
+    }*/
 }
