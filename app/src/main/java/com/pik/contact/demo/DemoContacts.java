@@ -30,5 +30,6 @@ public class DemoContacts {
         contactService.saveContact(new Contact("Carol", "Carol Ling", "Senior Software engineer", "cling@company.com", "123 567 8944", "cling94"));
         contactService.saveContact(new Contact("Pete", "Petter Brown", "Quality Analyst", "pbrown@company.com", "123 456 7895", "pbrown95"));
         contactService.saveContact(new Contact("Hugo", "Huugo Chavez", "Director de Orquesta", "hchavez@company.com", "123 456 7895", "pbrown95"));
+        contactService.saveContact(new Contact("Francisco", "Francisco Rodrigue", "CEO", "f.j@digital.com", "123 456 7895", "pbrown95"));
     }
 }
